@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchQuestions } from '../redux/ActionCreators';
 import Questions from './QuestionsComponent';
-import MatchQuestion from './MatchComponent';
+import MatchGroup from './MatchGroupComponent';
 import Final from './Final';
 import Home from './HomeComponent';
 import FinalScore from './FinalScoreComponent';
-import { SCENARIO_QUESTIONS } from '../shared/db';
-import { MATCH_INFO,MCQ_QUESTIONS } from '../shared/db';
+import { questions } from '../shared/db';
 import { Button } from 'react-bootstrap';
 import { Switch,Route,Redirect,withRouter } from 'react-router-dom';
 import "../index.css";
@@ -15,32 +14,89 @@ import "../index.css";
 class Main extends Component{
 	constructor(props){
     super(props);
-    this.state = {
-      questions1:SCENARIO_QUESTIONS,
-      questions2:MATCH_INFO,
-      question3:MCQ_QUESTIONS
-    }
   }
-
-  	
-
+  
 	render(){
+
+		var mq=[];
+		var sq=[];
+		console.log("Component mounted");
+		questions.MCQ.forEach((mcq) => {
+			const newq = {
+				"question" : mcq.value.question,
+				"options" : [
+					{
+						"id" : "1",
+						"content" : mcq.value.option1
+					},
+					{
+						"id" : "2",
+						"content" : mcq.value.option2
+					},
+					{
+						"id" : "3",
+						"content" : mcq.value.option3
+					},
+					{
+						"id" : "4",
+						"content" : mcq.value.option4
+					}
+				],
+				"answer" : mcq.value.answer
+			}
+			mq.push(newq);
+		});
+		questions.SCEN.forEach((sc) => {
+			const nq = {
+				"question" : sc.value.scenario,
+				"options" : [
+					{
+						"id" : "1",
+						"options" : sc.value.stmt1
+					},
+					{
+						"id" : "2",
+						"options" : sc.value.stmt2
+					},
+					{
+						"id" : "3",
+						"options" : sc.value.stmt3
+					}
+				],
+				"correctAnswer" : [
+					{
+						"id" : "1",
+						"options" : sc.value.cstmt1
+					},
+					{
+						"id" : "2",
+						"options" : sc.value.cstmt2
+					},
+					{
+						"id" : "3",
+						"options" : sc.value.cstmt3
+					}
+				]
+			}
+			sq.push(nq);
+		});
+
 		const Question = () =>{
 	  		return(
-	  			<Questions questions={this.state.questions1} />
+	  			<Questions questions={sq} />
 	  		);
 	  	}
 
 	  	const Match = () => {
 	  		return(
-	  			<MatchQuestion questions={this.state.questions2} />	
+	  			<MatchGroup matchgroups={questions.MATCH} />	
 	  		);
 	  	}
 
 	  	const Mcq = () => {
 	  		return(
 	  			<div className="col-12">
-	  				<Final quizQuestions={this.state.question3} />
+	  				<Final quizQuestions={mq} />
 	  			</div>
 	  		);
 	  	}
@@ -52,7 +108,7 @@ class Main extends Component{
               <Route exact path="/game1" component={ Question  } />
               <Route exact path="/game2" component={ Match  } />
               <Route exact path="/game3" component={ Mcq } /> 
-              <Redirect to="/home" />
+			  <Redirect to="/home" /> 
             </Switch>	
 		)
 	}

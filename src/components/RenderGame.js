@@ -110,7 +110,7 @@ class RenderGame extends Component {
 
         return (
             <div key={info.id}>
-                <a role="button" className="btn btn-success dropbox pt-1">{info.info}</a>
+                <a role="button" className="btn btn-success dropbox pt-1">{info.key}</a>
             </div>
         );
     });
@@ -149,7 +149,7 @@ class RenderGame extends Component {
                                 {...provided.dragHandleProps}
                                 className="col-12"
                                 >
-                                    <a role="button" className="btn btn-primary dropbox pt-1">{item.val}</a>
+                                    <a role="button" className="btn btn-primary dropbox pt-1">{item.value}</a>
                                 </div>
                             )}
                             </Draggable>

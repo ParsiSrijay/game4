@@ -1,338 +1,134 @@
 {
-  "users": [
-    {
-      "firstname": "Parsi",
-      "lastname": "Srijay",
-      "username": "srijay",
-      "password": "srijay1999",
-      "id": 1
-    },
-    {
-      "firstname": "sriz",
-      "lastname": "p",
-      "username": "sriz",
-      "password": "sriz123",
-      "id": 2
-    },
-    {
-      "firstname": "Parsi",
-      "lastname": "Srijay",
-      "username": "srijay",
-      "password": "sri",
-      "id": 3
-    },
-    {
-      "firstname": "ram",
-      "lastname": "k",
-      "username": "ramk",
-      "password": "123",
-      "id": 4
+    "version": 11,
+    "questions": {
+        "MCQ": [
+            {
+                "type": "MCQ",
+                "value": {
+                    "question": "sjdf;a",
+                    "option1": "haskldfalks",
+                    "option2": "khasdflk",
+                    "option3": "askjdfh",
+                    "option4": "asdhlak",
+                    "answer": "haskldfh",
+                    "comment": "klhaskdffh"
+                }
+            },
+            {
+                "type": "MCQ",
+                "value": {
+                    "question": "qqqq",
+                    "option1": "qqqq",
+                    "option2": "wwwwq",
+                    "option3": "wwww",
+                    "option4": "www",
+                    "answer": "asdklja",
+                    "comment": "alskjdflasjdf"
+                }
+            },
+            {
+                "type": "MCQ",
+                "value": {
+                    "category": "Responsible Decision-Making",
+                    "question": "asasdas",
+                    "option1": "dassad",
+                    "option2": "assa",
+                    "option4": "jh",
+                    "option3": "kjhk",
+                    "answer": "kjjhk",
+                    "comment": "lk;jkjl"
+                }
+            },
+            {
+                "type": "MCQ",
+                "value": {
+                    "question": "qwerq",
+                    "option2": "kkhk",
+                    "option1": "q",
+                    "option3": "q",
+                    "option4": "q",
+                    "answer": "wqeq",
+                    "comment": "qweqw"
+                }
+            }
+        ],
+        "SCEN": [
+            {
+                "type": "SCEN",
+                "value": {
+                    "scenario": "asjdf;alkj",
+                    "stmt1": "asdhf;lkasdj",
+                    "stmt2": "jjahsd;fljah;sl",
+                    "stmt3": "asljdfh;la",
+                    "cstmt1": "has;ljdfh;als",
+                    "cstmt2": "l;ahsdfl;",
+                    "cstmt3": "lha;sldfh;l"
+                }
+            },
+            {
+                "type": "SCEN",
+                "value": {
+                    "scenario": "dfasdfaasd",
+                    "stmt1": "fasdf",
+                    "stmt2": "kjl",
+                    "stmt3": "kjhkl",
+                    "cstmt1": "hkl",
+                    "cstmt2": "hklh",
+                    "cstmt3": "lk"
+                }
+            }
+        ],
+        "MATCH": [
+            {
+                "type": "MATCH",
+                "elements": [
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 0
+                    },
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 1
+                    },
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 2
+                    },
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 3
+                    }
+                ]
+            },
+            {
+              "type": "MATCH",
+                "elements": [
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 0
+                    },
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 1
+                    },
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 2
+                    },
+                    {
+                        "key": "Kiran",
+                        "value": "Kiran",
+                        "id": 3
+                    }
+                ]
+            }
+        ]
     }
-  ],
-  "SCENARIO_QUESTIONS": [
-    {
-      "id": 1,
-      "question": "How are you?",
-      "options": [
-        {
-          "id": 1,
-          "options": "a"
-        },
-        {
-          "id": 2,
-          "options": "b"
-        },
-        {
-          "id": 3,
-          "options": "c"
-        },
-        {
-          "id": 4,
-          "options": "d"
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": 1,
-          "options": "b"
-        },
-        {
-          "id": 2,
-          "options": "a"
-        },
-        {
-          "id": 3,
-          "options": "d"
-        },
-        {
-          "id": 4,
-          "options": "c"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "question": "How are you?",
-      "options": [
-        {
-          "id": 1,
-          "options": "a"
-        },
-        {
-          "id": 2,
-          "options": "b"
-        },
-        {
-          "id": 3,
-          "options": "c"
-        },
-        {
-          "id": 4,
-          "options": "d"
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": 1,
-          "options": "b"
-        },
-        {
-          "id": 2,
-          "options": "a"
-        },
-        {
-          "id": 3,
-          "options": "d"
-        },
-        {
-          "id": 4,
-          "options": "c"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "question": "How are you?",
-      "options": [
-        {
-          "id": 1,
-          "options": "a"
-        },
-        {
-          "id": 2,
-          "options": "b"
-        },
-        {
-          "id": 3,
-          "options": "c"
-        },
-        {
-          "id": 4,
-          "options": "d"
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": 1,
-          "options": "b"
-        },
-        {
-          "id": 2,
-          "options": "a"
-        },
-        {
-          "id": 3,
-          "options": "d"
-        },
-        {
-          "id": 4,
-          "options": "c"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "question": "How are you?",
-      "options": [
-        {
-          "id": 1,
-          "options": "a"
-        },
-        {
-          "id": 2,
-          "options": "b"
-        },
-        {
-          "id": 3,
-          "options": "c"
-        },
-        {
-          "id": 4,
-          "options": "d"
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": 1,
-          "options": "b"
-        },
-        {
-          "id": 2,
-          "options": "a"
-        },
-        {
-          "id": 3,
-          "options": "d"
-        },
-        {
-          "id": 4,
-          "options": "c"
-        }
-      ]
-    }
-  ],
-  "MATCH_INFO": [
-    {
-      "info": "a",
-      "val": "b",
-      "id": 1
-    },
-    {
-      "info": "This is",
-      "val": "good",
-      "id": 2
-    },
-    {
-      "info": "work",
-      "val": "hard",
-      "id": 3
-    },
-    {
-      "info": "Help",
-      "val": "others",
-      "id": 4
-    },
-    {
-      "info": "Always",
-      "val": "smile",
-      "id": 5
-    }
-  ],
-  "MCQ_QUESTIONS": [
-  {
-      "question": "What should be included in acheiving happiness in life?",
-      "options": [
-          {
-            "id": "1",
-            "content": "Being helpful and trusting of others"
-          },
-          {
-            "id": "2",
-            "content": "Have a sense of self-esteem"
-          },
-          {
-            "id": "3",
-            "content": "Appreciating day-to-day living joys"
-          },
-          {
-            "id": "4",
-            "content": "All of these"
-          }
-      ],
-      "answer":"All of these"
-  },
-  {
-    "question": "What is not an spheres of life and happiness?",
-    "options": [
-          {
-            "id": "1",
-            "content": "Financial health"
-          },
-          {
-            "id": "2",
-            "content": "Spiritual life or belief system"
-          },
-          {
-            "id": "3",
-            "content": "work and career"
-          },
-          {
-            "id": "4",
-            "content": "Emotional superficial states"
-          }
-      ],
-      "answer":"Emotional superficial states"
-  },
-  {
-    "question": "Which of the following characterizes mood?",
-    "options": [
-        {
-            "id": "1",
-            "content": "Cannot tie to an event"
-        },
-        {
-            "id": "2",
-            "content": "Cannot tie to a physiological sensation"
-        },
-        {
-            "id": "3",
-            "content": "It is a vague general experience"
-        },
-        {
-          "id": "4",
-          "content": "All of these"
-      }
-         
-      ],
-      "answer":"All of these"
-  },
-  {
-    "question": "Which of the following is appropriate way fo making contact?",
-    "options": [
-        {
-            "id": "1",
-            "content": "Good eye-contact"
-        },
-        {
-            "id": "2",
-            "content": "Appropriate distance and tone"
-        },
-        {
-            "id": "3",
-            "content": "Open body position"
-        },
-        {
-          "id": "4",
-          "content": "All of these"
-      }
-         
-      ],
-      "answer":"All of these"
-  },{
-    "question": "Which part of the brain is very primitive and response to your raw emotion?",
-    "options": [
-        {
-            "id": "1",
-            "content": "Thalamus"
-        },
-        {
-            "id": "2",
-            "content": "Amygdala"
-        },
-        {
-            "id": "3",
-            "content": "Cerebrum"
-        },
-        {
-          "id": "4",
-          "content": "None of these"
-      }
-         
-      ],
-      "answer":"Amygdala"
-  }
-  
-]
-
-
 }
