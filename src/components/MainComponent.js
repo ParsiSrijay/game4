@@ -52,6 +52,7 @@ class Main extends Component{
               <Route exact path="/game1" component={ Question  } />
               <Route exact path="/game2" component={ Match  } />
               <Route exact path="/game3" component={ Mcq } /> 
+              <Redirect to="/home" />
             </Switch>	
 		)
 	}

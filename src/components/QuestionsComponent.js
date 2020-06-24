@@ -14,7 +14,8 @@ import '../App.css';
 var count = 0;
 var a=0;
 var len=0;
-function CheckAnswer({correctAnswer,selectedOptions,display,score}){
+var check = false;
+function CheckAnswer({correctAnswer,selectedOptions,display,score,response}){
   var c=0;
   if(a===len && display){
     for(var i=0;i<correctAnswer.length;i++){
@@ -22,29 +23,24 @@ function CheckAnswer({correctAnswer,selectedOptions,display,score}){
         c=c+1
       }
       else{
+        count = count-1;
         return( 
           <>
           <FinalScore score={count} />
             <Alert key={1} variant='danger'>
-              Wrong Answer !!!
+              Wrong Answer !!! { a }
             </Alert>
-            <Alert variant="primary">
-              Your Score : {count}
-              
-          </Alert>
           </>
         );
       }
     }
-    count = score + 1;
+    
+    console.log(count);
     return( 
       <>
         <FinalScore score={count} />
         <Alert key={1} variant='success'>
           Correct Answer !!!
-        </Alert>
-        <Alert variant="primary">
-            Your Score : {count}
         </Alert>
       </>   
     );
@@ -55,29 +51,22 @@ function CheckAnswer({correctAnswer,selectedOptions,display,score}){
         c=c+1
       }
       else{
+        count = count -1;
         return( 
           <>
           	<Alert key={1} variant='danger'>
-            	Wrong Answer !!!
+            	Wrong Answer !!! { a }
           	</Alert>
-          	<Alert variant="primary">
-          		Your Score : {count}
-              
-        	</Alert>
           </>
         );
       }
     }
-    count = score + 1;
+    console.log(count);
     return( 
       <>
       	<Alert key={1} variant='success'>
         	Correct Answer !!!
       	</Alert>
-      	<Alert variant="primary">
-          	Your Score : {count}
-            
-        </Alert>
       </>   
     );
   }
@@ -146,10 +135,12 @@ class OptionDetails extends Component {
   }
 
   handleDrag(){
-    a=this.props.response + 1;
     this.setState({
       dragDisabled:true
     });
+    a = this.props.response + 1; 
+    console.log("a is " +a);
+    console.log("count is " +count);
   }
 
   
@@ -225,17 +216,35 @@ class Questions extends Component{
       response:0
     }
     this.handleScore = this.handleScore.bind(this);
+    this.handleResponse = this.handleResponse.bind(this);
+    this.handle = this.handle.bind(this);
+  }
+
+  componentDidMount(){
+    count=this.state.score;
+    a=this.state.response;
   }
 
   handleScore(){
     this.setState({
-      score:count,
-      response:a
+      score:count
     });
+  }
+
+  handleResponse(){
+      this.setState({
+        response:a
+      });
+  }
+
+  handle(){
+    this.handleResponse();
+    this.handleScore();
   }
 
   render(){
     len=this.props.questions.length;
+    count = this.props.questions.length;
     const questions = this.props.questions.map((question)=>{
       return(
           <>
@@ -243,7 +252,6 @@ class Questions extends Component{
                <RenderQuestions question={question} />
                <div className="mt-2">
                 <OptionDetails options={question.options} correctAnswer={question.correctAnswer} score={this.state.score} response={this.state.response}/>
-                    {this.handleScore}
                </div>
             </div>
           </> 
@@ -260,7 +268,7 @@ class Questions extends Component{
           </div>
           <div className="row">
             <div className="col-12 col-md-8 ml-auto mr-auto">
-              <Carousel onNextStart={this.handleScore}>
+              <Carousel onNextStart={this.handle} onPrevStart={this.handleResponse}> 
                 {questions}
               </Carousel>
             </div>
