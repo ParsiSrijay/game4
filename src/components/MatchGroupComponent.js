@@ -196,11 +196,6 @@ class RenderGame extends Component {
                         <span>Score</span>
                     </Button>
                 </div>
-                <div className="mt-2 offset-2" style={{display: this.state.dragDisabled ? 'inline-block' : 'none' }}>
-                    <Button onClick={this.handleScore} className="bg-warning dropbox pt-1">
-                        <span>Play Again</span>
-                    </Button>
-                </div>
             </div>
         </div>
         <div className="mt-2">

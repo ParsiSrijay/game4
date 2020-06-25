@@ -5,6 +5,8 @@ import { Alert } from 'react-bootstrap';
 import desktopImage from '../assets/images/matchbg.png';
 import Score from './ScoreComponent';
 
+
+var count = 0;
 function CheckAnswer({correctAnswer,selectedOptions,display}){
   var c=0;
   if(display){

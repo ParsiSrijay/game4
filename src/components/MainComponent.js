@@ -10,6 +10,8 @@ import { questions } from '../shared/db';
 import { Button } from 'react-bootstrap';
 import { Switch,Route,Redirect,withRouter } from 'react-router-dom';
 import "../index.css";
+import soundfile from '../assets/sound.mp3';
+import Sound from 'react-sound';
 
 class Main extends Component{
 	constructor(props){
@@ -18,6 +20,7 @@ class Main extends Component{
   
 	render(){
 
+		
 		var mq=[];
 		var sq=[];
 		console.log("Component mounted");
@@ -103,13 +106,16 @@ class Main extends Component{
 	  	
 
 		return(
+			<>
+			<Sound url={soundfile} playStatus={Sound.status.PLAYING}/>
 			<Switch>
 			  <Route exact path="/home" component={() => <Home />} />	
               <Route exact path="/game1" component={ Question  } />
               <Route exact path="/game2" component={ Match  } />
               <Route exact path="/game3" component={ Mcq } /> 
 			  <Redirect to="/home" /> 
-            </Switch>	
+            </Switch>
+            </>	
 		)
 	}
 }
