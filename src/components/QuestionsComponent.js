@@ -8,7 +8,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Alert,Button } from 'react-bootstrap';
 import FinalScore from './FinalScoreComponent';
 import { Switch,Route,withRouter } from 'react-router-dom';
-import desktopImage from '../assets/images/rearrangebg.png';
+import desktopImage from '../assets/images/game4.jpg';
 import '../App.css';
 
 var count = 0;
@@ -262,7 +262,7 @@ class Questions extends Component{
         <div className="App" style={{backgroundImage: `url(${desktopImage})` }}>
           <div className="row">
             <div className="col-12 mt-5 col-md-8">
-              <h3>Questions</h3>
+              <h3 className="game1">Questions</h3>
               <hr />
             </div>
           </div>

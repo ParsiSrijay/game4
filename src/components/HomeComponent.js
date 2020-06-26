@@ -1,7 +1,7 @@
 import React,{ Component } from "react";
 import { Button } from "reactstrap";
 import { Link,Redirect,withRouter } from 'react-router-dom';
-import desktopImage from '../assets/images/engaged.png';
+import desktopImage from '../assets/images/engaged.jpg';
 
 class Home extends Component{
 
@@ -30,9 +30,9 @@ class Home extends Component{
 			<div className="App1" style={{backgroundImage: `url(${desktopImage})` }}> 
 			<div className="center">
 				<div className="col-12">
-					<Button className="btnstyle mr-3 mb-4" onClick={this.handlegame1}> Game-1 </Button>
-					<Button className="btnstyle mr-3 mb-4" onClick={this.handlegame2}> Game-2 </Button>
-					<Button className="btnstyle mr-3 mb-4" onClick={this.handlegame3}> Game-3 </Button>
+					<Button className="btnstyle mr-2 mb-4" onClick={this.handlegame1}> Game-1 </Button>
+					<Button className="btnstyle mr-2 mb-4" onClick={this.handlegame2}> Game-2 </Button>
+					<Button className="btnstyle mr-2 mb-4" onClick={this.handlegame3}> Game-3 </Button>
 				</div>
 			</div>
 			</div> 

@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import { Button,Modal,ModalHeader,ModalBody } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
+import Confetti from 'react-confetti';
 
 class Score extends Component{
 	constructor(props){
@@ -19,6 +20,11 @@ class Score extends Component{
 
 	render(){
 		return(
+			<>
+			<Confetti
+          		width={1000}
+          		height={1000}
+        	/>
 			<Modal isOpen={true}>
 				<ModalHeader>Game Ended!!</ModalHeader>
 				<ModalBody>
@@ -35,6 +41,7 @@ class Score extends Component{
 					</div>
 				</ModalBody>
 			</Modal>
+			</>
 		);
 	}
 }

@@ -18,6 +18,8 @@ class Main extends Component{
     super(props);
   }
   
+
+
 	render(){
 
 		
@@ -107,7 +109,7 @@ class Main extends Component{
 
 		return(
 			<>
-			<Sound url={soundfile} playStatus={Sound.status.PLAYING}/>
+			<Sound url={soundfile} playStatus={Sound.status.PLAYING} />
 			<Switch>
 			  <Route exact path="/home" component={() => <Home />} />	
               <Route exact path="/game1" component={ Question  } />

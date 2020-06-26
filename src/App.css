@@ -122,6 +122,7 @@ address{
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% 100%;
+    background-attachment: scroll;
 }
 
 .App-content {
@@ -159,3 +160,19 @@ address{
     background-size: 80% 50%;
 }
 
+.btnstyle {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:active {  
+  transform: translateY(4px);
+}
